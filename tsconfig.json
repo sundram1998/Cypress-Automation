@@ -4,7 +4,13 @@
     "lib": ["es5", "dom"],
     "allowJs": true,
     "baseUrl": "./",
-    "types": ["cypress", "node", "@shelex/cypress-allure-plugin"],
+    "types": [
+      "cypress",
+      "node",
+      "@shelex/cypress-allure-plugin",
+      "./node_modules/cypress",
+      "./reporter"
+    ],
     "noEmit": true
   },
   "include": ["**/*.ts"]

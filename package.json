@@ -1,8 +1,15 @@
 {
+  "scripts": {
+    "cy:run": "./node_modules/.bin/cypress run --env allure=true"
+  },
   "devDependencies": {
     "@shelex/cypress-allure-plugin": "^2.40.0",
     "@testing-library/cypress": "^9.0.0",
+    "allure-commandline": "^2.23.0",
     "cypress": "^12.17.0",
+    "cypress-multi-reporters": "^1.6.3",
+    "mocha-allure-reporter": "^1.4.0",
+    "mocha-junit-reporter": "^2.2.0",
     "typescript": "^5.1.6"
   }
 }
