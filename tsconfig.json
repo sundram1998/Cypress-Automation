@@ -8,8 +8,7 @@
       "cypress",
       "node",
       "@shelex/cypress-allure-plugin",
-      "./node_modules/cypress",
-      "./reporter"
+      "./node_modules/cypress"
     ],
     "noEmit": true
   },
