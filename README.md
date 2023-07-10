@@ -1,1 +1,1 @@
-https://github.com/Shelex/cypress-allure-plugin
+Allure-reporting configuration-https://github.com/Shelex/cypress-allure-plugin
