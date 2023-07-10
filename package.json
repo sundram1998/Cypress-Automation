@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "cy:run": "./node_modules/.bin/cypress run --env allure=true"
+    "cy:run": "npx cypress run --env allure=true --reporter mocha-allure-reporter"
   },
   "devDependencies": {
     "@shelex/cypress-allure-plugin": "^2.40.0",
