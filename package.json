@@ -1,6 +1,9 @@
 {
   "scripts": {
     "cy:run": "npx cypress run --env allure=true --reporter mocha-allure-reporter",
+    "cy:run:regression": "npx cypress run --spec 'cypress/regression/*'",
+    "cy:open:regression": "npx cypress open --config specPattern='./cypress/regression/**/*.spec.{js,jsx,ts,tsx}'",
+    "cy:open:e2e": "npx cypress open",
     "allure-result": "allure generate allure-results --clean -o allure-report",
     "my:result": "allure generate --clean --output your-result-folder"
   },

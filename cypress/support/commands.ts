@@ -1,4 +1,7 @@
 /// <reference types="cypress" />
+
+import cypress = require("cypress");
+
 // ***********************************************
 // This example commands.ts shows you how to
 // create various custom commands and overwrite
@@ -35,3 +38,15 @@
 //     }
 //   }
 // }
+declare global {
+  namespace Cypress {
+    interface Chainable {
+      login(email: string, password: string): Chainable<void>;
+      drag(subject: string, options?: Partial<TypeOptions>): Chainable<Element>;
+      dismiss(
+        subject: string,
+        options?: Partial<TypeOptions>
+      ): Chainable<Element>;
+    }
+  }
+}

@@ -16,6 +16,7 @@ module.exports = defineConfig({
       return config;
     },
     env: {
+      allure: true,
       allureResultsPath: "allure-results",
     },
     specPattern: ["**/*.cy.{js,jsx,ts,tsx}", "**/*.spec.{js,jsx,ts,tsx}"],
@@ -25,5 +26,6 @@ module.exports = defineConfig({
   retries: { runMode: 1, openMode: 0 },
   numTestsKeptInMemory: 0,
   defaultCommandTimeout: 25000,
+  pageLoadTimeout: 100000,
   chromeWebSecurity: true,
 });
