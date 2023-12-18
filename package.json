@@ -1,19 +1,23 @@
 {
+  "cypress": {
+    "commands": "./cypress/support/commands.js"
+  },
   "scripts": {
     "cy:run": "npx cypress run --env allure=true --reporter mocha-allure-reporter",
     "cy:run:e2e": "npx cypress run --spec 'cypress/e2e/*'",
-    "cy:open:e2e": "npx cypress open --spec 'cypress/e2e/*'",
+    "cy:open:e2e": "npx cypress open",
+    "cy:open:regression": "npx cypress open --config specPattern='./cypress/regression'",
     "allure-result": "allure generate allure-results --clean -o allure-report",
     "my:result": "allure generate --clean --output your-result-folder"
   },
   "devDependencies": {
     "@shelex/cypress-allure-plugin": "^2.40.0",
-    "@testing-library/cypress": "^9.0.0",
+    "@testing-library/cypress": "^10.0.1",
     "allure-commandline": "^2.23.0",
-    "cypress": "^12.17.0",
+    "cypress": "^13.6.1",
     "cypress-multi-reporters": "^1.6.3",
     "mocha-allure-reporter": "^1.4.0",
     "mocha-junit-reporter": "^2.2.0",
-    "typescript": "^5.1.6"
+    "typescript": "^5.3.3"
   }
 }
