@@ -39,17 +39,18 @@
 // cypress/support/commands.js
 
 // Create a module or use an existing one (e.g., declare-cypress.d.ts)
-declare module "cypress" {
-  interface Chainable {
-    login(username: string, password: string): void;
-  }
-}
+// declare module "cypress" {
+//   interface Chainable {
+//     login(username: string, password: string): void;
+//   }
+// }
 
 // Your Cypress command file (e.g., commands.js)
 declare namespace Cypress {
   interface Chainable<Subject = any> {
     // Use keyof to ensure that "login" is a valid key of Chainable<any>
     login: (username: string, password: string) => Chainable<Subject>;
+    subNavValidation();
   }
 }
 
@@ -60,3 +61,4 @@ Cypress.Commands.add("login", (username: string, password: string) => {
   cy.get('input[placeholder="Password"]').type(password);
   cy.get("#login-button").click();
 });
+Cypress.Commands.add("subNavValidation", () => {});
