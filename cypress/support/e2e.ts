@@ -15,9 +15,10 @@
 
 // Import commands.js using ES2015 syntax:
 import "./commands";
-import "cypress-axe";
 import "@shelex/cypress-allure-plugin";
+import "cypress-axe";
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
 require("@shelex/cypress-allure-plugin");
+require("cypress-axe");

@@ -61,4 +61,6 @@ Cypress.Commands.add("login", (username: string, password: string) => {
   cy.get('input[placeholder="Password"]').type(password);
   cy.get("#login-button").click();
 });
-Cypress.Commands.add("subNavValidation", () => {});
+Cypress.Commands.add("subNavValidation", () => {
+  
+});

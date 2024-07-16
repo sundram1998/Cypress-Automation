@@ -12,6 +12,15 @@ generation.on("exit", function (exitCode) {
 module.exports = defineConfig({
   e2e: {
     setupNodeEvents(on, config) {
+      const environment = config.env.HOST_ENV || "dev";
+
+      const baseUrls = {
+        dev: "https://rahulshettyacademy.com/seleniumPractise/#/",
+        qa1: "https://rahulshettyacademy.com/AutomationPractice/",
+        prod: "https://www.google.co.in/",
+      };
+      config.baseUrl = baseUrls[environment];
+
       allureWriter(on, config);
       return config;
     },
